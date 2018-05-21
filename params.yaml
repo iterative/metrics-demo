@@ -5,6 +5,6 @@ estimators: 165
 split: 0.56984
 trees: 28
 min_split: 16
-sample: 0.20676
-ngrams: 5
-epochs: 19
+sample: 0.23794
+ngrams: 7
+epochs: 16
