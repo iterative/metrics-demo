@@ -1,10 +1,10 @@
-weight_factor: 0.16231
+weight_factor: 0.20031
 columns: 57
 max_depth: 3
-estimators: 109
-split: 0.57566
+estimators: 126
+split: 0.47934
 trees: 31
-min_split: 14
+min_split: 17
 sample: 0.28002
 ngrams: 6
 epochs: 20
