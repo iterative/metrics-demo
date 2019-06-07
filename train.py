@@ -2,7 +2,7 @@
 import sys, json
 import random
 
-VERSION = 365
+VERSION = 366
 
 
 import yaml
