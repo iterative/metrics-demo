@@ -1,4 +1,4 @@
-weight_factor: 0.19005
+weight_factor: 0.2291
 columns: 49
 max_depth: 4
 estimators: 118
