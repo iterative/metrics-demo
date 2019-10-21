@@ -3,7 +3,7 @@ columns: 52
 max_depth: 3
 estimators: 102
 split: 0.44864
-trees: 29
+trees: 35
 min_split: 12
 sample: 0.22536
 ngrams: 7
