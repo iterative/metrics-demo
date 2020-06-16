@@ -2,7 +2,7 @@
 import sys, json
 import random
 
-VERSION = 509
+VERSION = 510
 
 
 import yaml
