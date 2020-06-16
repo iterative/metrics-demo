@@ -6,5 +6,5 @@ split: 0.47613
 trees: 26
 min_split: 15
 sample: 0.20839
-ngrams: 6
+ngrams: 7
 epochs: 23
