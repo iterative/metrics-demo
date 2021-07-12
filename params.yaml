@@ -3,8 +3,8 @@ columns: 56
 max_depth: 3
 estimators: 133
 split: 0.542
-trees: 30
+trees: 23
 min_split: 16
 sample: 0.3103
 ngrams: 5
-epochs: 18
+epochs: 17
