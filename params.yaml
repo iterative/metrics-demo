@@ -1,5 +1,5 @@
 weight_factor: 0.21466
-columns: 54
+columns: 50
 max_depth: 4
 estimators: 139
 split: 0.55652
