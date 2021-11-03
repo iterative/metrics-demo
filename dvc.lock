@@ -1,0 +1,70 @@
+schema: '2.0'
+stages:
+  split:
+    cmd: python split.py events.csv events-train.csv events-test.csv
+    deps:
+    - path: events.csv
+      md5: a181e156773daf1620f139fd87d0b9eb
+      size: 1119
+    - path: split.py
+      md5: b3a178d35c7926190fb8bdce5b7681d5
+      size: 713
+    outs:
+    - path: events-test.csv
+      md5: 012d63ebb79cbf475c14ba8f3c2078d5
+      size: 345
+    - path: events-train.csv
+      md5: bc0884988797a71c9e7dee2d95fb448b
+      size: 774
+  featurize:
+    cmd: python featurize.py events-train.csv events-train-feats.csv
+    deps:
+    - path: events-train.csv
+      md5: bc0884988797a71c9e7dee2d95fb448b
+      size: 774
+    - path: featurize.py
+      md5: 7b2a95111520e5fb198f97e83665bb11
+      size: 698
+    outs:
+    - path: events-train-feats.csv
+      md5: 15032bccb83038ca69590b92dd4cc205
+      size: 46
+  train:
+    cmd: python train.py events-train-feats.csv model.json
+    deps:
+    - path: events-train-feats.csv
+      md5: 15032bccb83038ca69590b92dd4cc205
+      size: 46
+    - path: train.py
+      md5: 446ba8635cb92d8d7b76bf69ff9d547e
+      size: 1320
+    params:
+      params.yaml:
+        epochs: 45
+        estimators: 190
+        features: 1100
+        max_features: 1500
+        min_features: 4200
+        passes: 54
+        random_state: 158000000
+        weight_factor: 0.2
+    outs:
+    - path: model.json
+      md5: c3c7628215b617484a30317032bf6d99
+      size: 301
+  evaluate:
+    cmd: python evaluate.py model.json events-test.csv
+    deps:
+    - path: evaluate.py
+      md5: c258e9d091c93e3369d1b250bc0386d1
+      size: 42863
+    - path: events-test.csv
+      md5: 012d63ebb79cbf475c14ba8f3c2078d5
+      size: 345
+    - path: model.json
+      md5: c3c7628215b617484a30317032bf6d99
+      size: 301
+    outs:
+    - path: metrics.json
+      md5: 6b6dc8a097be353f668230772ecbc912
+      size: 1213

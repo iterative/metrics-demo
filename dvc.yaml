@@ -1,0 +1,41 @@
+stages:
+  split:
+    cmd: python split.py events.csv events-train.csv events-test.csv
+    deps:
+    - events.csv
+    - split.py
+    outs:
+    - events-test.csv
+    - events-train.csv
+  featurize:
+    cmd: python featurize.py events-train.csv events-train-feats.csv
+    deps:
+    - events-train.csv
+    - featurize.py
+    outs:
+    - events-train-feats.csv
+  train:
+    cmd: python train.py events-train-feats.csv model.json
+    deps:
+    - events-train-feats.csv
+    - train.py
+    params:
+    - epochs
+    - estimators
+    - features
+    - max_features
+    - min_features
+    - passes
+    - random_state
+    - weight_factor
+    outs:
+    - model.json
+  evaluate:
+    cmd: python evaluate.py model.json events-test.csv
+    deps:
+    - evaluate.py
+    - events-test.csv
+    - model.json
+    metrics:
+    - metrics.json:
+        cache: false
