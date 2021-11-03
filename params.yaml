@@ -5,4 +5,4 @@ max_features: 1500
 epochs: 45
 passes: 54
 weight_factor: 0.2
-random_state: 158000000
+random_state: 188663604
