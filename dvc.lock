@@ -56,8 +56,8 @@ stages:
     cmd: python evaluate.py model.json events-test.csv
     deps:
     - path: evaluate.py
-      md5: c258e9d091c93e3369d1b250bc0386d1
-      size: 42863
+      md5: 93b0f7a82313065991647069ff358c83
+      size: 42864
     - path: events-test.csv
       md5: 012d63ebb79cbf475c14ba8f3c2078d5
       size: 345
