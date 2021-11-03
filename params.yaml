@@ -1,4 +1,4 @@
-min_features: 4200
+min_features: 3494
 estimators: 190
 features: 1100
 max_features: 1500

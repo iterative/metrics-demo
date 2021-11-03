@@ -44,13 +44,13 @@ stages:
         estimators: 190
         features: 1100
         max_features: 1500
-        min_features: 4200
+        min_features: 3494
         passes: 54
         random_state: 158000000
         weight_factor: 0.2
     outs:
     - path: model.json
-      md5: 9942bf444daeb8569e50356351a694cc
+      md5: ae64721b5c36f68ec1e69ca2ae971816
       size: 301
   evaluate:
     cmd: python evaluate.py model.json events-test.csv
@@ -62,9 +62,9 @@ stages:
       md5: 012d63ebb79cbf475c14ba8f3c2078d5
       size: 345
     - path: model.json
-      md5: 9942bf444daeb8569e50356351a694cc
+      md5: ae64721b5c36f68ec1e69ca2ae971816
       size: 301
     outs:
     - path: metrics.json
-      md5: 0e011d163cd13f997be9ce84b973f01c
-      size: 1209
+      md5: ea864aa1738c2fa03fc69cf28abf7944
+      size: 1211
