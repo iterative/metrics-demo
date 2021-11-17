@@ -1,5 +1,5 @@
 min_features: 3494
-estimators: 190
+estimators: 223
 features: 1100
 max_features: 1500
 epochs: 45
