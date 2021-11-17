@@ -47,11 +47,11 @@ stages:
         min_features: 3494
         passes: 54
         random_state: 188663604
-        weight_factor: 0.2
+        weight_factor: 0.21959
     outs:
     - path: model.json
-      md5: 7d567a77fb550fe1cf80f9e8de19da84
-      size: 301
+      md5: 3564213e4a534499a9069ad442e92f73
+      size: 305
   evaluate:
     cmd: python evaluate.py model.json events-test.csv
     deps:
@@ -62,9 +62,9 @@ stages:
       md5: 012d63ebb79cbf475c14ba8f3c2078d5
       size: 345
     - path: model.json
-      md5: 7d567a77fb550fe1cf80f9e8de19da84
-      size: 301
+      md5: 3564213e4a534499a9069ad442e92f73
+      size: 305
     outs:
     - path: metrics.json
-      md5: 5546df706c647b691a200ae03131f4b1
-      size: 1210
+      md5: 2462fa22133ce37dee196922c80f8cf7
+      size: 1217
