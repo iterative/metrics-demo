@@ -3,6 +3,6 @@ estimators: 198
 features: 1342
 max_features: 1789
 epochs: 39
-passes: 66
+passes: 60
 weight_factor: 0.17333
 random_state: 188663604
