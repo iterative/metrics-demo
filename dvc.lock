@@ -40,7 +40,7 @@ stages:
       size: 1322
     params:
       params.yaml:
-        epochs: 36
+        epochs: 33
         estimators: 207
         features: 844
         max_features: 1655
@@ -50,7 +50,7 @@ stages:
         weight_factor: 0.17277
     outs:
     - path: model.json
-      md5: 785013955e1475c7737ee1c77939db74
+      md5: a91b62adce4147582a63354f4bf8bd45
       size: 305
   evaluate:
     cmd: python evaluate.py model.json events-test.csv
@@ -62,9 +62,9 @@ stages:
       md5: 4254b5a775be05547093d14b9b81b523
       size: 674
     - path: model.json
-      md5: 785013955e1475c7737ee1c77939db74
+      md5: a91b62adce4147582a63354f4bf8bd45
       size: 305
     outs:
     - path: metrics.json
-      md5: ff94aec3f11b43f507d0eea86545a966
+      md5: 33fb16dcf028ea563096336c901ebd39
       size: 1213
