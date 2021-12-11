@@ -1,8 +1,8 @@
-min_features: 3494
+min_features: 4921
 estimators: 198
-features: 1342
-max_features: 1789
+features: 1082
+max_features: 1256
 epochs: 39
 passes: 60
-weight_factor: 0.17333
+weight_factor: 0.15729
 random_state: 188663604
