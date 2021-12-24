@@ -23,17 +23,17 @@ stages:
       md5: f44a2e1f01fe62611b2ab106cf986f6e
       size: 2589
     - path: featurize.py
-      md5: 2419335b379e33a245e3fe70e766e848
+      md5: 1687f4159321c1f719b14abeedc08425
       size: 703
     outs:
     - path: events-train-feats.csv
-      md5: 2bde96de7e324e9b609a413653694362
+      md5: b345ae343c0c0fb11807f50644add14a
       size: 47
   train:
     cmd: python train.py events-train-feats.csv model.json
     deps:
     - path: events-train-feats.csv
-      md5: 2bde96de7e324e9b609a413653694362
+      md5: b345ae343c0c0fb11807f50644add14a
       size: 47
     - path: train.py
       md5: 4dee7bf4c9b3cc2706466914a69f9282
@@ -50,7 +50,7 @@ stages:
         weight_factor: 0.17277
     outs:
     - path: model.json
-      md5: bb3a43e178c90f34fdd52dd6ea9e08a5
+      md5: 07edee9e10c43afc14003e6fe543fdbb
       size: 306
   evaluate:
     cmd: python evaluate.py model.json events-test.csv
@@ -62,9 +62,9 @@ stages:
       md5: 1c027f0a67cf36c208faea6b90f3fa73
       size: 855
     - path: model.json
-      md5: bb3a43e178c90f34fdd52dd6ea9e08a5
+      md5: 07edee9e10c43afc14003e6fe543fdbb
       size: 306
     outs:
     - path: metrics.json
-      md5: 03c068bb062fceabaf4437f44dbc19fc
-      size: 1219
+      md5: 8c069d00c37ca78fc69786485e786bd7
+      size: 1216
