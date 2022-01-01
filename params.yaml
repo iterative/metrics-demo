@@ -4,7 +4,7 @@ max_depth: 3
 estimators: 112
 split: 0.50948
 trees: 26
-min_split: 14
-sample: 0.24822
+min_split: 17
+sample: 0.2568
 ngrams: 6
 epochs: 16
