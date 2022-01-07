@@ -1,6 +1,6 @@
 weight_factor: 0.21283
 columns: 58
-max_depth: 3
+max_depth: 4
 estimators: 112
 split: 0.50948
 trees: 26
