@@ -2,7 +2,7 @@
 import sys, json
 import random
 
-VERSION = 803
+VERSION = 804
 
 
 import yaml
