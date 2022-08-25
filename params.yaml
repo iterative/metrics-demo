@@ -1,9 +1,9 @@
-weight_factor: 0.22014
-columns: 52
-max_depth: 4
-estimators: 115
+weight_factor: 0.15553
+columns: 39
+max_depth: 3
+estimators: 153
 split: 0.50384
-trees: 24
+trees: 36
 min_split: 12
 sample: 0.23426
 ngrams: 6
