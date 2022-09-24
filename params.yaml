@@ -7,4 +7,4 @@ trees: 36
 min_split: 12
 sample: 0.19529
 ngrams: 4
-epochs: 20
+epochs: 23
