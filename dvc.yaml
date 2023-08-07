@@ -1,0 +1,43 @@
+stages:
+  split:
+    cmd: python split.py data.csv data-train.csv data-test.csv
+    deps:
+    - data.csv
+    - split.py
+    outs:
+    - data-test.csv
+    - data-train.csv
+  featurize:
+    cmd: python featurize.py data-train.csv data-train-feats.csv
+    deps:
+    - data-train.csv
+    - featurize.py
+    outs:
+    - data-train-feats.csv
+  train:
+    cmd: python train.py data-train-feats.csv model.json
+    deps:
+    - data-train-feats.csv
+    - train.py
+    params:
+    - columns
+    - epochs
+    - estimators
+    - max_depth
+    - min_split
+    - ngrams
+    - sample
+    - split
+    - trees
+    - weight_factor
+    outs:
+    - model.json
+  evaluate:
+    cmd: python evaluate.py model.json data-test.csv
+    deps:
+    - data-test.csv
+    - evaluate.py
+    - model.json
+    metrics:
+    - metrics.json:
+        cache: false
